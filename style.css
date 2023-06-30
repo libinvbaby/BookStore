@@ -437,6 +437,7 @@ align-self: center;
     }
     .book-image img {
         width: 156px;
+        margin-top: 10px;
         height: 212px;}
         h3 {
             font-size: 26px;
