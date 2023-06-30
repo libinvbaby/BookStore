@@ -437,6 +437,7 @@ align-self: center;
     }
     .book-image img {
         width: 156px;
+        padding: 10px;
         height: 212px;}
         h3 {
             font-size: 26px;
@@ -530,7 +531,8 @@ align-self: center;
 }
 
 
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 520px) {
     
   .links {
     position: absolute;
@@ -539,5 +541,12 @@ align-self: center;
   .links {
     width: 100%;
   }
- 
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 }
