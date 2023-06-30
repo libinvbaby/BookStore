@@ -171,9 +171,9 @@ header {
 /* hero css end*/
 /* books card section start */
 .books-container{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     align-items:center;
+    flex-direction: column;
     justify-items: center; 
     padding: 50px 0px;
 }
