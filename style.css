@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap');
-/* #6527BE
-#9681EB
-#45CFDD
-#A7EDE7 */
+
 :root{
     --main-font:"Poppins", sans-serif;
     --sub-font:'Roboto Slab', serif;
@@ -12,6 +9,9 @@
     --white:#fff;
 
 
+}
+html{
+    scroll-behavior:smooth
 }
 
 * {
@@ -345,7 +345,11 @@ align-self: center;
     font-family: var(--main-font);
 }
 
-
+.newsleter-content h3{
+    color: var(--main-color);
+    font-family: var(--sub-font);
+    
+}
 
 
 @keyframes slideIn {

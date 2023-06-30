@@ -1,6 +1,7 @@
 const toggleButton = document.getElementsByClassName("toggle-button")[0]
 const navbarLinks = document.getElementsByClassName("links")[0]
 function navbarHandler(){
+    // making navabr hamberger button active
 navbarLinks.classList.toggle("active");
 if (navbarLinks.classList.contains("active")) {
     toggleButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
