@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap');
+/* #6527BE
+#9681EB
+#45CFDD
+#A7EDE7 */
+:root{
+    --main-font:"Poppins", sans-serif;
+    --sub-font:'Roboto Slab', serif;
+    --main-color:#6527BE;
+    --title-color:#6527BE;
+    --white:#fff;
+
+
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+h2 {
+  font-size: 48px;
+}
+h3{
+    font-size:38px;
+}
+h5 {
+  font-size: 20px;
+}
+.text-center{
+    text-align: center;
+}
+.text-white{
+    color: #fff;
+}
+.text-dark{
+    color: #000;
+}
+/* header css */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 1;
+}
+.navabar {
+  background: #45cedd83;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+.logo h5{
+    color: #fff;
+    font-family: var(--main-font);
+}
+.links ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.links ul li {
+  list-style: none;
+}
+.links ul li a {
+    font-family: var(--main-font);
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+.links ul li a:hover {
+  text-decoration: none;
+  color: #6527be;
+}
+.nav-button {
+  border: 1px solid #6527be;
+  background-color: #6527be;
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-button:hover {
+  border: 1px solid #000;
+  background-color: #000;
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: #fff;
+}
+.nav-button:hover  a{
+    color: #fff!important;
+}
+.toggle-button {
+  position: absolute;
+  right: 35px;
+  top: 20px;
+  display: none;
+}
+/* header css */
+/* hero css start*/
+.hero-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #dde1e5;
+  height: 100vh;
+  align-items: center;
+}
+.title-section{
+   max-width: 600px;
+   padding:50px;
+}
+.title-section h5{
+    font-family: var(--main-font);
+    color: #000;
+    
+}
+.title-section h2{
+    margin-top: 20px;
+    font-family: var(--sub-font);
+    color: var(--title-color);
+    font-weight: 600;
+    
+}
+.title-section  p{
+    margin-top: 20px;
+    font-size:18px;
+    font-family: var(--main-font);
+
+}
+.read-button{
+    background-color: var(--title-color);
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    color: var(--white);
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+
+.image-section{
+    max-width: 500px;
+}
+.info h5{
+    padding: 20px 0px 0px 0px;
+    font-family: var(--main-font);
+    color: #000;
+    
+}
+.info h2{
+   
+    font-family: var(--sub-font);
+    color: var(--title-color);
+    font-weight: 600;
+    
+}
+/* hero css end*/
+/* books card section start */
+.books-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items:center;
+    justify-items: center; 
+    padding: 50px 0px;
+}
+.cards{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  align-items: center; 
+}
+.card{
+   
+    background-color:#6527be66;
+    max-width: 500px;
+    display: flex;
+    align-items:center;
+    border-radius: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    height: 300px;
+
+}
+.book-title-author{
+    position: relative;
+    padding: 10px;
+    
+}
+.book-title-author h5{
+    font-family: var(--main-font);
+    color: #fff;
+}
+.book-title-author h3{
+    font-family: var(--sub-font);
+    color: #fff;
+
+}
+.short-desc p{
+    font-family: var(--main-font);
+    text-align: justify; 
+    color: #fff;
+
+}
+.short-desc{
+    display: none;    
+}
+.book-image img{
+    width: 200px;
+    height: 260px;
+    border-radius:20px;
+}
+.card:hover .short-desc{
+    display: block;
+    padding: 20px;
+    animation: slideIn 2s forwards;
+}
+.card:hover .book-title-author h3{
+    display: none;
+}
+.card:hover .book-title-author h5{
+    display: none;
+}
+.card:hover .book-image img{
+    transform: scale(1.1);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
+
+}
+/* books card section end */
+/* popup start */
+.popupcontainer{
+    position:fixed;
+    top: 100px;
+    left: 30%;
+    width: 600px;
+    height: 500px;
+    background-color: #000;
+    z-index: 2;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: var(--main-font);
+    display: none;
+   
+}
+
+.popup-content h3,h5{
+    color: #fff;
+}
+.popupclose{
+    position: absolute;
+    right:20px;
+    top: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+    margin:30px 0px
+}
+.newsletter-container{
+    
+    max-width: 700px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-family: var(--main-font);
+    border:none;
+    /* background-color: #6627be93; */
+    border-radius: 30px;
+    color: #000;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.newsleter-image img{
+    width:290px;
+}
+.input-section{
+    margin-top:20px
+}
+.input-section input {
+    height:50px;
+    width:250px;
+    font-size: 18px;
+    font-family: var(--main-font);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+.input-section button {
+    border-radius: 20px;
+    position: absolute;
+    right: 46px;
+    padding: 16px;
+    background: var(--main-color);
+    border: none;
+    font-family: var(--main-font);
+    color: #fff;
+}
+
+footer{
+    padding: 50px 0px;
+    background: var(--main-color);
+
+    color: #fff;
+    font-family: var(--main-font);
+display: flex;
+justify-content: space-around;
+align-self: center;
+}
+.footersub{
+    background: var(--main-color);
+    padding: 10px 0px;
+    color: #fff;
+    font-family: var(--main-font);
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navabar {
+    flex-direction: column;
+  }
+  .toggle-button {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    right: 35px;
+    width: 250px;
+    background:  #9681EB;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 30px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    animation: slideIn 0.3s ease forwards;
+  }
+  .links ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    transition: ease 1s;
+    animation: slideIn 0.5s ease forwards;
+  }
+  .links ul li a{
+    color: #fff;
+  }
+  .links {
+    display: none;
+  }
+  .links.active {
+    display: block;
+  }
+  
+  .title-section h5{
+   
+    font-family: var(--main-font);
+    color: #000;
+    font-size: 16px;
+    
+}
+.title-section h2{
+    margin-top: 20px;
+    font-family: var(--sub-font);
+    color: var(--title-color);
+    font-size: 34px;
+    font-weight: 600;
+    
+}
+.title-section{
+    max-width: 500px;}
+    .popupcontainer{
+        position:fixed;
+        top: 100px;
+        left: 17%;
+        grid-template-columns: 1fr;
+        height: 550px;
+        align-items: center;
+        justify-content: center;
+    }
+    #popup-image{
+        width:250px;
+        height: 250px;
+    }
+    .popupimage{
+        text-align: center;
+    }
+    .book-image img {
+        width: 156px;
+        height: 212px;}
+        h3 {
+            font-size: 26px;
+        }
+}
+@media only screen and (max-width: 767px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        height: 100%;
+      }
+  .title-section h5{
+    font-family: var(--main-font);
+    color: #000;
+    font-size: 16px;
+    
+}
+.title-section h2{
+    margin-top: 20px;
+    font-family: var(--sub-font);
+    color: var(--title-color);
+    font-size: 34px;
+    font-weight: 600;
+    
+}
+.title-section{
+    max-width: 100%;
+    padding:30px;
+ }
+ .image-section{
+    max-width: 100%;
+    padding:0px;
+ }
+
+ .cards{
+    padding:5px;
+    grid-template-columns: 1fr 
+ }
+ .card{
+    margin: 10px 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    
+   
+ }
+ .book-title-author h5{
+    font-size: 16px;
+    text-align: center;
+}
+.book-title-author h3{
+    font-size:24px;
+    text-align: center;
+
+}
+.short-desc p{
+    font-family: var(--main-font);
+    text-align: justify; 
+}
+.popupcontainer{
+    position:fixed;
+    top: 100px;
+    left: 0;
+    grid-template-columns: 1fr;
+    height: 550px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#popup-image{
+    width:250px;
+    height: 250px;
+}
+.newsletter-container {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+}
+.input-section input {
+    width: 100%;}
+.input-section button {
+    border-radius: 20px;
+    position: absolute;
+    right: 29px;}
+    .footer{
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+  .links {
+    position: absolute;
+    right: 0px;
+  }
+  .links {
+    width: 100%;
+  }
+ 
+}

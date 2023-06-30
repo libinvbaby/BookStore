@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!-- Navabr section start -->
+        <header>
+            <div class="navabar">
+                <div class="logo">
+                    <h5>BookStore</h5>
+                </div>
+                <div  class="toggle-button" onclick="navbarHandler()"><i class="fa-solid fa-bars"></i></div>
+                <div class="links">
+                    <ul>
+                        <li class="nav-links"><a href="/">Home</a></li>
+                        <li class="nav-links"><a href="">About</a></li>
+                        <li class="nav-links"><a href="">Categories</a></li>
+                        <li class="nav-links"><a href="">Contact</a></li>
+                        <li class="nav-links nav-button"><a href="">Get Quote</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </header>
+    <!-- Navabr section end -->
+    <!-- banner section start -->
+    <section>
+        <div class="hero-container">
+            <div class="title-section">
+                <h5>LET'S MAKE THE BEST INVESTMENT</h5>
+                <h2>There Is No Friend As Loyal As A Book</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad harum quibusdam, assumenda quia explicabo.</p>
+                <button class="read-button">Read More</button>
+            </div>
+            <div class="image-section">
+                <img width="100%" src="./images/hero.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- banner section end -->
+    <!-- books section start -->
+    <section style="background:#f8f9fa">
+        <div class="info">
+            <h5 class="text-center">BOOKS GALLERY
+            </h5>
+            <h2 class="text-center">Popular Books
+            </h2>
+        </div>
+       <div class="books-container">
+       
+        <div class="cards">
+            <!-- card start -->
+            <div class="card" onclick="handlePopup(this)">
+                <div class="book-image">
+                    <img src="./images/Books/to-kill-moking-bird.jpg" alt="">
+                </div>
+                <div class="book-title-author">
+                    
+                    <h3>To Kill a Mockingbird</h3>
+                    <h5 class="text-dark">by Harper Lee</h5>
+                    <div class="short-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nec diam pulvinar, a accumsan mi pulvinar. Duis fermentum volutpat elit</p>
+                        <button class="read-button">Order-now</button>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <!-- card send -->
+            <!-- card start -->
+            <div class="card" onclick="handlePopup(this)">
+                <div class="book-image">
+                    <img  src="./images/Books/pride-and-prejudice.jpg" alt="">
+                </div>
+                <div class="book-title-author">
+                    
+                    <h3>Pride and Prejudice</h3>
+                    <h5 class="text-dark">by Jane Austen</h5>
+                    <div class="short-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nec diam pulvinar, a accumsan mi pulvinar. Duis fermentum volutpat elit</p>
+                        <button class="read-button">Order-now</button>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <!-- card send -->
+            <!-- card start -->
+            <div class="card" onclick="handlePopup(this)">
+                <div class="book-image">
+                    <img src="./images/Books/The-Great-Gatsby.jpg" alt="">
+                </div>
+                <div class="book-title-author">
+                    
+                    <h3>The Great Gatsby</h3>
+                    <h5 class="text-dark">by F. Scott Fitzgerald</h5>
+                    <div class="short-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nec diam pulvinar, a accumsan mi pulvinar. Duis fermentum volutpat elit</p>
+                        <button class="read-button">Order-now</button>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <!-- card send -->
+            <!-- card start -->
+            <div class="card" onclick="handlePopup(this)">
+                <div class="book-image">
+                    <img src="./images/Books/1984.jfif" alt="">
+                </div>
+                <div class="book-title-author">
+                    
+                    <h3>1984</h3>
+                    <h5 class="text-dark"s>by George Orwell</h5>
+                    <div class="short-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nec diam pulvinar, a accumsan mi pulvinar. Duis fermentum volutpat elit</p>
+                        <button class="read-button">Order-now</button>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <!-- card send -->
+        </div>
+       </div>
+    </section>
+    <!-- books section end -->
+
+
+    <!-- popup start -->
+    <div id="popup" class="popupcontainer">
+        <div class="popupclose"  onclick="handlePopupClose()">
+            <i class="fa-solid fa-xmark text-white"></i>
+        </div>
+        <div class="popupimage">
+            <img id="popup-image" width="100%" src="" alt="">
+        </div>
+        <div class="popup-content">
+            <h3 id="popup-title"></h3>
+            <h5 id="popup-author"></h5>
+            <div class="short-description">
+                <p id="popup-description" class="text-white"></p>
+                <button class="read-button">Order-now</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- popup end -->
+    <!-- newsletter section start -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <div class="newsleter-image"><img width="100%" src="./images/cover-1.png" alt=""></div>
+            <div class="newsleter-content">
+                <h3>Join Our Community
+                </h3>
+                <p>Sign up & get 10% of your first books.
+                </p>
+                <div class="input-section">
+                    <input type="text" placeholder="Your Email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- newsletter section end -->
+    <footer>
+        <div class="title-footer">
+            <h3>Book Information?
+            </h3>
+            <p>Please send us an email at support@gmail.com
+
+            </p>
+        </div>
+        <div class="contact-us">
+            <h3>Need Help?
+            </h3>
+            <p>Please call us at 0123456789
+
+            </p>
+        </div>
+        
+    </footer>
+    <hr>
+    <div class="footersub">
+        <p class="text-center">
+            © 2023 All right reserved. <span>BookStore</span> 
+
+
+        </p>
+    </div>
+
+
+    
+    <script src="./script.js">
+      
+        </script>
+        
+</body>
+</html>
